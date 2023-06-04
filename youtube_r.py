@@ -1,16 +1,18 @@
 import os
 import subprocess
-from tkinter import *
+from tkinter import StringVar, Entry, Tk, END, Label, Button
+# from tkinter import *
 from pytube import YouTube
 
 root = Tk()
-root.geometry('600x120')
+root.geometry('600x130')
 root.title("Скачать видео с YouTube")
 root["bg"] = "#3c3f41"
 link = StringVar()
 entry_text = "Введите ссылку"
 link_enter = Entry(root, width=44, textvariable=link)
 link_enter.place(x=20, y=20)
+root.resizable(False, False)  # Запретить изменение размера окна
 
 
 def on_entry_click(event):
@@ -36,8 +38,12 @@ def YouTubeDownloader():
         url = YouTube(str(link.get()))
         video = url.streams.get_highest_resolution()
         video.download()
-        file_path = os.path.join(os.getcwd()) #, video.default_filename)
-        Label(root, text=f'Видео скачено{file_path}', font='arial 10', bg="#D55B06", fg="white").place(x=20, y=60)
+        file_path = os.path.join(os.getcwd())  # , video.default_filename)
+        file_size = os.path.getsize(file_path)
+        quality = f"{video.resolution} ({video.mime_type})"
+        Label(root, text=f'Видео скачено: {file_path}', font='arial 10', bg="#D55B06", fg="white").place(x=20, y=60)
+        Label(root, text=f'Размер файла: {file_size / 1000} Мб', font='arial 10', bg=root["bg"], fg="white").place(x=20, y=80)
+        Label(root, text=f'Качество видео: {quality}', font='arial 10', bg=root["bg"], fg="white").place(x=20, y=100)
         subprocess.call(["xdg-open", file_path])
     else:
         Label(root, text='Cсылка пуста!', font='arial 10', bg=root["bg"], fg="red").place(x=20, y=60)
