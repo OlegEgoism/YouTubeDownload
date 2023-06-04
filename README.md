@@ -1,6 +1,6 @@
 Window application to download videos from Youtube.
-
 Оконное приложение для скачивания видео с Youtube.
+Нужно установить tkinter отдельно, если будет ошибка при запуске окна.
 
 ![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/01a96061-8fc4-4826-bcfb-b0784577b276)
 

@@ -41,9 +41,10 @@ def YouTubeDownloader():
         file_path = os.path.join(os.getcwd())  # , video.default_filename)
         file_size = os.path.getsize(file_path)
         quality = f"{video.resolution} ({video.mime_type})"
-        Label(root, text=f'Видео скачено: {file_path}', font='arial 10', bg="#D55B06", fg="white").place(x=20, y=60)
-        Label(root, text=f'Размер файла: {file_size / 1000} Мб', font='arial 10', bg=root["bg"], fg="white").place(x=20, y=80)
-        Label(root, text=f'Качество видео: {quality}', font='arial 10', bg=root["bg"], fg="white").place(x=20, y=100)
+        text_info = 'arial 10'
+        Label(root, text=f'Видео скачено: {file_path}', font=text_info, bg="#D55B06", fg="white").place(x=20, y=60)
+        Label(root, text=f'Размер файла: {file_size / 1000} Мб', font=text_info, bg=root["bg"], fg="white").place(x=20, y=80)
+        Label(root, text=f'Качество видео: {quality}', font=text_info, bg=root["bg"], fg="white").place(x=20, y=100)
         subprocess.call(["xdg-open", file_path])
     else:
         Label(root, text='Cсылка пуста!', font='arial 10', bg=root["bg"], fg="red").place(x=20, y=60)
