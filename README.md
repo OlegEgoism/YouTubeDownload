@@ -4,11 +4,9 @@ Window application to download videos from Youtube.
 
 Нужно установить tkinter отдельно, если будет ошибка при запуске окна.
 
-[Запись экрана](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/79023a3b-517f-4c74-a117-c2bda28ff781)
+[Запись экрана](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/ee700ad3-7adf-495d-8b0a-a5352e4e5380)
 
 
-![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/01a96061-8fc4-4826-bcfb-b0784577b276)
+![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/5ef02119-a7ce-40b5-ad9e-1e997113fbd0)
 
-![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/0661b669-3337-4375-8c07-e47f3fd4989a)
-
-![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/a6cb99bd-76cb-4d3c-bf03-3b865e3b8b07)
+![image](https://github.com/OlegEgoism/YouTubeDownload/assets/81327146/83bcca9d-e8b4-4e0f-a2e0-870c2a13360c)
