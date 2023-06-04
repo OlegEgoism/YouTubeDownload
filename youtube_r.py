@@ -3,6 +3,7 @@ import subprocess
 from tkinter import StringVar, Entry, Tk, END, Label, Button
 # from tkinter import *
 from pytube import YouTube
+from PIL import ImageTk, Image
 
 root = Tk()
 root.geometry('600x130')
@@ -13,6 +14,12 @@ entry_text = "Введите ссылку"
 link_enter = Entry(root, width=44, textvariable=link)
 link_enter.place(x=20, y=20)
 root.resizable(False, False)  # Запретить изменение размера окна
+
+youtube_logo = Image.open("youtube_logo.png")
+youtube_logo = youtube_logo.resize((50, 50))
+youtube_logo = ImageTk.PhotoImage(youtube_logo)
+logo_label = Label(root, image=youtube_logo, bg=root["bg"])
+logo_label.place(x=500, y=65)
 
 
 def on_entry_click(event):
