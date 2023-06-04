@@ -10,7 +10,7 @@ root.geometry('600x130')
 root.title("Скачать видео с YouTube")
 root["bg"] = "#3c3f41"
 link = StringVar()
-entry_text = "Введите ссылку"
+entry_text = "Вставьте ссылку на видео"
 link_enter = Entry(root, width=44, textvariable=link)
 link_enter.place(x=20, y=20)
 root.resizable(False, False)  # Запретить изменение размера окна
